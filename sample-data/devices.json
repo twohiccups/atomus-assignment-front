@@ -1,0 +1,206 @@
+{
+    "@odata.context": "https://api-gov.securitycenter.microsoft.us/api/$metadata#Collection(microsoft.windowsDefenderATP.api.PublicAssetVulnerabilityDto)",
+    "@odata.count": 20,
+    "value": [
+        {
+            "id": "d6d1e3f506ef2ddcd88ef6914007cf789bac9f67-_-CVE-2024-8385-_-mozilla-_-firefox-_-129.0.0.0-_-",
+            "cveId": "CVE-2024-8385",
+            "machineId": "d6d1e3f506ef2ddcd88ef6914007cf789bac9f67",
+            "fixingKbId": null,
+            "productName": "firefox",
+            "productVendor": "mozilla",
+            "productVersion": "129.0.0.0",
+            "severity": "Critical"
+        },
+        {
+            "id": "80752c388ff147fcd047a825d17b100c52c5a122-_-CVE-2024-8384-_-mozilla-_-firefox-_-128.0.0.0-_-",
+            "cveId": "CVE-2024-8384",
+            "machineId": "80752c388ff147fcd047a825d17b100c52c5a122",
+            "fixingKbId": null,
+            "productName": "firefox",
+            "productVendor": "mozilla",
+            "productVersion": "128.0.0.0",
+            "severity": "High"
+        },
+        {
+            "id": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0-_-CVE-2024-7971-_-google-_-chrome-_-127.0.6533.99-_-",
+            "cveId": "CVE-2024-7971",
+            "machineId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0",
+            "fixingKbId": null,
+            "productName": "chrome",
+            "productVendor": "google",
+            "productVersion": "127.0.6533.99",
+            "severity": "Critical"
+        },
+        {
+            "id": "b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1-_-CVE-2024-38063-_-microsoft-_-windows_10_21h2-_-10.0.19044.4780-_-",
+            "cveId": "CVE-2024-38063",
+            "machineId": "b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1",
+            "fixingKbId": "KB5041580",
+            "productName": "windows_10_21h2",
+            "productVendor": "microsoft",
+            "productVersion": "10.0.19044.4780",
+            "severity": "Critical"
+        },
+        {
+            "id": "c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2-_-CVE-2024-38178-_-microsoft-_-edge_chromium-_-127.0.2651.86-_-",
+            "cveId": "CVE-2024-38178",
+            "machineId": "c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2",
+            "fixingKbId": null,
+            "productName": "edge_chromium",
+            "productVendor": "microsoft",
+            "productVersion": "127.0.2651.86",
+            "severity": "High"
+        },
+        {
+            "id": "d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3-_-CVE-2024-38189-_-microsoft-_-office_365-_-16.0.17830.20138-_-",
+            "cveId": "CVE-2024-38189",
+            "machineId": "d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3",
+            "fixingKbId": "KB5002626",
+            "productName": "office_365",
+            "productVendor": "microsoft",
+            "productVersion": "16.0.17830.20138",
+            "severity": "Critical"
+        },
+        {
+            "id": "e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4-_-CVE-2024-6387-_-openssh-_-openssh-_-9.7p1-_-",
+            "cveId": "CVE-2024-6387",
+            "machineId": "e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4",
+            "fixingKbId": null,
+            "productName": "openssh",
+            "productVendor": "openssh",
+            "productVersion": "9.7p1",
+            "severity": "Critical"
+        },
+        {
+            "id": "f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5-_-CVE-2024-39397-_-adobe-_-acrobat_reader-_-24.002.20991-_-",
+            "cveId": "CVE-2024-39397",
+            "machineId": "f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5",
+            "fixingKbId": null,
+            "productName": "acrobat_reader",
+            "productVendor": "adobe",
+            "productVersion": "24.002.20991",
+            "severity": "Critical"
+        },
+        {
+            "id": "a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6-_-CVE-2024-4577-_-php-_-php-_-8.2.19-_-",
+            "cveId": "CVE-2024-4577",
+            "machineId": "a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6",
+            "fixingKbId": null,
+            "productName": "php",
+            "productVendor": "php",
+            "productVersion": "8.2.19",
+            "severity": "Critical"
+        },
+        {
+            "id": "b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7-_-CVE-2024-21762-_-fortinet-_-fortigate-_-7.4.2-_-",
+            "cveId": "CVE-2024-21762",
+            "machineId": "b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7",
+            "fixingKbId": null,
+            "productName": "fortigate",
+            "productVendor": "fortinet",
+            "productVersion": "7.4.2",
+            "severity": "Critical"
+        },
+        {
+            "id": "d6d1e3f506ef2ddcd88ef6914007cf789bac9f67-_-CVE-2024-8381-_-mozilla-_-firefox-_-129.0.0.0-_-",
+            "cveId": "CVE-2024-8381",
+            "machineId": "d6d1e3f506ef2ddcd88ef6914007cf789bac9f67",
+            "fixingKbId": null,
+            "productName": "firefox",
+            "productVendor": "mozilla",
+            "productVersion": "129.0.0.0",
+            "severity": "High"
+        },
+        {
+            "id": "80752c388ff147fcd047a825d17b100c52c5a122-_-CVE-2024-8382-_-mozilla-_-firefox-_-128.0.0.0-_-",
+            "cveId": "CVE-2024-8382",
+            "machineId": "80752c388ff147fcd047a825d17b100c52c5a122",
+            "fixingKbId": null,
+            "productName": "firefox",
+            "productVendor": "mozilla",
+            "productVersion": "128.0.0.0",
+            "severity": "Medium"
+        },
+        {
+            "id": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0-_-CVE-2024-7965-_-google-_-chrome-_-127.0.6533.99-_-",
+            "cveId": "CVE-2024-7965",
+            "machineId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0",
+            "fixingKbId": null,
+            "productName": "chrome",
+            "productVendor": "google",
+            "productVersion": "127.0.6533.99",
+            "severity": "High"
+        },
+        {
+            "id": "b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1-_-CVE-2024-30088-_-microsoft-_-windows_10_21h2-_-10.0.19044.4780-_-",
+            "cveId": "CVE-2024-30088",
+            "machineId": "b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1",
+            "fixingKbId": "KB5039227",
+            "productName": "windows_10_21h2",
+            "productVendor": "microsoft",
+            "productVersion": "10.0.19044.4780",
+            "severity": "High"
+        },
+        {
+            "id": "c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2-_-CVE-2024-21413-_-microsoft-_-outlook-_-16.0.17628.20144-_-",
+            "cveId": "CVE-2024-21413",
+            "machineId": "c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2",
+            "fixingKbId": "KB5002537",
+            "productName": "outlook",
+            "productVendor": "microsoft",
+            "productVersion": "16.0.17628.20144",
+            "severity": "Critical"
+        },
+        {
+            "id": "d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3-_-CVE-2024-3400-_-paloaltonetworks-_-pan-os-_-11.1.2-_-",
+            "cveId": "CVE-2024-3400",
+            "machineId": "d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3",
+            "fixingKbId": null,
+            "productName": "pan-os",
+            "productVendor": "paloaltonetworks",
+            "productVersion": "11.1.2",
+            "severity": "Critical"
+        },
+        {
+            "id": "e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4-_-CVE-2024-23897-_-jenkins-_-jenkins-_-2.441-_-",
+            "cveId": "CVE-2024-23897",
+            "machineId": "e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4",
+            "fixingKbId": null,
+            "productName": "jenkins",
+            "productVendor": "jenkins",
+            "productVersion": "2.441",
+            "severity": "Critical"
+        },
+        {
+            "id": "f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5-_-CVE-2024-27198-_-jetbrains-_-teamcity-_-2023.11.4-_-",
+            "cveId": "CVE-2024-27198",
+            "machineId": "f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5",
+            "fixingKbId": null,
+            "productName": "teamcity",
+            "productVendor": "jetbrains",
+            "productVersion": "2023.11.4",
+            "severity": "Critical"
+        },
+        {
+            "id": "a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6-_-CVE-2024-1709-_-connectwise-_-screenconnect-_-23.9.7-_-",
+            "cveId": "CVE-2024-1709",
+            "machineId": "a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6",
+            "fixingKbId": null,
+            "productName": "screenconnect",
+            "productVendor": "connectwise",
+            "productVersion": "23.9.7",
+            "severity": "Critical"
+        },
+        {
+            "id": "b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7-_-CVE-2024-29824-_-ivanti-_-endpoint_manager-_-2022_su5-_-",
+            "cveId": "CVE-2024-29824",
+            "machineId": "b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7",
+            "fixingKbId": null,
+            "productName": "endpoint_manager",
+            "productVendor": "ivanti",
+            "productVersion": "2022_su5",
+            "severity": "Critical"
+        }
+    ]
+}

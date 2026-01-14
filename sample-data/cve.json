@@ -1,0 +1,2632 @@
+{
+    "resultsPerPage": 100,
+    "startIndex": 0,
+    "totalResults": 30,
+    "format": "NVD_CVE",
+    "version": "2.0",
+    "timestamp": "2024-09-06T05:36:56.413",
+    "vulnerabilities": [
+        {
+            "cve": {
+                "id": "CVE-2024-8385",
+                "sourceIdentifier": "security@mozilla.org",
+                "published": "2024-09-03T13:15:05.290",
+                "lastModified": "2024-09-05T18:22:41.337",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "A difference in the handling of StructFields and ArrayTypes in WASM could be used to trigger an exploitable type confusion vulnerability in Mozilla Firefox."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Una diferencia en el manejo de StructFields y ArrayTypes en WASM podría usarse para desencadenar una vulnerabilidad de confusión de tipos explotable en Mozilla Firefox."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 10
+                            },
+                            "baseSeverity": "CRITICAL",
+                            "exploitabilityScore": 10,
+                            "impactScore": 10,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-843"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:mozilla:firefox:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "130.0",
+                                        "matchCriteriaId": "E5A6D7A3-B3F1-4C5E-8B2D-9A8C7F6E4B2A"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://www.mozilla.org/security/advisories/mfsa2024-39/",
+                        "source": "security@mozilla.org",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1911909",
+                        "source": "security@mozilla.org",
+                        "tags": [
+                            "Issue Tracking"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-8384",
+                "sourceIdentifier": "security@mozilla.org",
+                "published": "2024-09-03T13:15:05.120",
+                "lastModified": "2024-09-05T18:20:12.453",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "The JavaScript garbage collector could mis-color cross-compartment objects if OOM conditions were detected at the right point between two passes. This could have led to memory corruption in Mozilla Firefox."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "El recolector de basura de JavaScript podría colorear incorrectamente objetos entre compartimentos si se detectaban condiciones OOM en el punto correcto entre dos pasadas."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "MEDIUM",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "PARTIAL",
+                                "integrityImpact": "PARTIAL",
+                                "availabilityImpact": "PARTIAL",
+                                "baseScore": 6.8
+                            },
+                            "baseSeverity": "MEDIUM",
+                            "exploitabilityScore": 8.6,
+                            "impactScore": 6.4,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": true
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-787"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:mozilla:firefox:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "130.0",
+                                        "matchCriteriaId": "E5A6D7A3-B3F1-4C5E-8B2D-9A8C7F6E4B2B"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://www.mozilla.org/security/advisories/mfsa2024-39/",
+                        "source": "security@mozilla.org",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-7971",
+                "sourceIdentifier": "chrome-cve-admin@google.com",
+                "published": "2024-08-21T21:15:09.173",
+                "lastModified": "2024-08-26T14:22:18.940",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Type confusion in V8 in Google Chrome prior to 128.0.6613.84 allowed a remote attacker to exploit heap corruption via a crafted HTML page."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "La confusión de tipos en V8 en Google Chrome anterior a 128.0.6613.84 permitió a un atacante remoto explotar la corrupción del heap a través de una página HTML manipulada."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 10
+                            },
+                            "baseSeverity": "CRITICAL",
+                            "exploitabilityScore": 10,
+                            "impactScore": 10,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-843"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "128.0.6613.84",
+                                        "matchCriteriaId": "F8B2C4A1-D5E3-4F6A-B7C8-9D0E1F2A3B4C"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://chromereleases.googleblog.com/2024/08/stable-channel-update-for-desktop_21.html",
+                        "source": "chrome-cve-admin@google.com",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://crbug.com/359950618",
+                        "source": "chrome-cve-admin@google.com",
+                        "tags": [
+                            "Permissions Required"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-38063",
+                "sourceIdentifier": "secure@microsoft.com",
+                "published": "2024-08-13T18:15:12.453",
+                "lastModified": "2024-08-19T13:00:23.117",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Windows TCP/IP Remote Code Execution Vulnerability. An unauthenticated attacker could send specially crafted IPv6 packets to a Windows machine which could enable remote code execution."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Vulnerabilidad de ejecución remota de código en Windows TCP/IP. Un atacante no autenticado podría enviar paquetes IPv6 especialmente diseñados a una máquina Windows que podría habilitar la ejecución remota de código."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 10
+                            },
+                            "baseSeverity": "CRITICAL",
+                            "exploitabilityScore": 10,
+                            "impactScore": 10,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": true,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-191"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:microsoft:windows_10_21h2:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "10.0.19044.4780",
+                                        "matchCriteriaId": "A1B2C3D4-E5F6-7890-ABCD-EF1234567890"
+                                    },
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:microsoft:windows_11_23h2:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "10.0.22631.4037",
+                                        "matchCriteriaId": "B2C3D4E5-F6A7-8901-BCDE-F12345678901"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38063",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "Patch",
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-38178",
+                "sourceIdentifier": "secure@microsoft.com",
+                "published": "2024-08-13T18:15:14.780",
+                "lastModified": "2024-08-20T16:45:22.110",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Scripting Engine Memory Corruption Vulnerability in Microsoft Edge (Chromium-based). This vulnerability requires the target to be using Edge in Internet Explorer Mode."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Vulnerabilidad de corrupción de memoria del motor de scripting en Microsoft Edge (basado en Chromium). Esta vulnerabilidad requiere que el objetivo use Edge en modo Internet Explorer."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "HIGH",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 7.6
+                            },
+                            "baseSeverity": "HIGH",
+                            "exploitabilityScore": 4.9,
+                            "impactScore": 10,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": true
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-787"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:edge_chromium:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "127.0.2651.98",
+                                        "matchCriteriaId": "C3D4E5F6-A7B8-9012-CDEF-123456789012"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38178",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "Patch",
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-38189",
+                "sourceIdentifier": "secure@microsoft.com",
+                "published": "2024-08-13T18:15:16.123",
+                "lastModified": "2024-08-21T14:30:45.220",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Microsoft Project Remote Code Execution Vulnerability. An attacker could exploit this vulnerability by convincing a user to open a specially crafted Microsoft Project file."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Vulnerabilidad de ejecución remota de código en Microsoft Project. Un atacante podría explotar esta vulnerabilidad convenciendo a un usuario de abrir un archivo de Microsoft Project especialmente diseñado."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "MEDIUM",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 9.3
+                            },
+                            "baseSeverity": "CRITICAL",
+                            "exploitabilityScore": 8.6,
+                            "impactScore": 10,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": true
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-94"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:365_apps:*:*:*:*:enterprise:*:*:*",
+                                        "matchCriteriaId": "D4E5F6A7-B8C9-0123-DEFG-234567890123"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38189",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "Patch",
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-6387",
+                "sourceIdentifier": "secalert@redhat.com",
+                "published": "2024-07-01T13:15:06.467",
+                "lastModified": "2024-07-24T18:45:33.890",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "A signal handler race condition was found in OpenSSH's server (sshd), where a client does not authenticate within LoginGraceTime seconds (120 by default), then sshd's SIGALRM handler is called asynchronously and calls various functions that are not async-signal-safe."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Se encontró una condición de carrera del manejador de señales en el servidor de OpenSSH (sshd), donde un cliente no se autentica dentro de los segundos LoginGraceTime (120 por defecto)."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:H/Au:N/C:C/I:C/A:C",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "HIGH",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 7.6
+                            },
+                            "baseSeverity": "HIGH",
+                            "exploitabilityScore": 4.9,
+                            "impactScore": 10,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": true,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-362"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:openbsd:openssh:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "8.5p1",
+                                        "versionEndExcluding": "9.8p1",
+                                        "matchCriteriaId": "E5F6A7B8-C9D0-1234-EFGH-345678901234"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://www.qualys.com/2024/07/01/cve-2024-6387/regresshion.txt",
+                        "source": "secalert@redhat.com",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    },
+                    {
+                        "url": "https://www.openssh.com/txt/release-9.8",
+                        "source": "secalert@redhat.com",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-39397",
+                "sourceIdentifier": "psirt@adobe.com",
+                "published": "2024-08-14T12:15:22.890",
+                "lastModified": "2024-08-22T16:30:11.447",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Adobe Commerce versions 2.4.7-p1, 2.4.6-p6, 2.4.5-p8, 2.4.4-p9 and earlier are affected by an Unrestricted Upload of File with Dangerous Type vulnerability that could result in arbitrary code execution."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Las versiones de Adobe Commerce 2.4.7-p1, 2.4.6-p6, 2.4.5-p8, 2.4.4-p9 y anteriores están afectadas por una vulnerabilidad de carga sin restricciones de archivos con tipo peligroso."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 10
+                            },
+                            "baseSeverity": "CRITICAL",
+                            "exploitabilityScore": 10,
+                            "impactScore": 10,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-434"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:adobe:commerce:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "2.4.7-p2",
+                                        "matchCriteriaId": "F6G7H8I9-J0K1-2345-LMNO-456789012345"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://helpx.adobe.com/security/products/magento/apsb24-61.html",
+                        "source": "psirt@adobe.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-4577",
+                "sourceIdentifier": "security@php.net",
+                "published": "2024-06-09T20:15:09.550",
+                "lastModified": "2024-06-21T15:22:33.117",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "In PHP versions 8.1.* before 8.1.29, 8.2.* before 8.2.20, 8.3.* before 8.3.8, when using Apache and PHP-CGI on Windows, if the system is set up to use certain code pages, Windows may use \"Best-Fit\" behavior to replace characters in command line."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "En las versiones de PHP 8.1.* anteriores a 8.1.29, 8.2.* anteriores a 8.2.20, 8.3.* anteriores a 8.3.8, cuando se usa Apache y PHP-CGI en Windows, si el sistema está configurado para usar ciertas páginas de códigos."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 10
+                            },
+                            "baseSeverity": "CRITICAL",
+                            "exploitabilityScore": 10,
+                            "impactScore": 10,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": true,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-78"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:php:php:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "8.1.0",
+                                        "versionEndExcluding": "8.1.29",
+                                        "matchCriteriaId": "G7H8I9J0-K1L2-3456-MNOP-567890123456"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://www.php.net/ChangeLog-8.php",
+                        "source": "security@php.net",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    },
+                    {
+                        "url": "https://github.com/php/php-src/security/advisories/GHSA-3qgc-jrrr-25jv",
+                        "source": "security@php.net",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-21762",
+                "sourceIdentifier": "psirt@fortinet.com",
+                "published": "2024-02-09T16:15:08.890",
+                "lastModified": "2024-02-16T18:30:22.443",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "A out-of-bounds write in Fortinet FortiOS versions 7.4.0 through 7.4.2, 7.2.0 through 7.2.6, 7.0.0 through 7.0.13, 6.4.0 through 6.4.14, 6.2.0 through 6.2.15 allows attacker to execute unauthorized code or commands via specially crafted requests."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Una escritura fuera de límites en Fortinet FortiOS versiones 7.4.0 a 7.4.2, 7.2.0 a 7.2.6, 7.0.0 a 7.0.13, 6.4.0 a 6.4.14, 6.2.0 a 6.2.15 permite a un atacante ejecutar código o comandos no autorizados."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 10
+                            },
+                            "baseSeverity": "CRITICAL",
+                            "exploitabilityScore": 10,
+                            "impactScore": 10,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": true,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-787"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:fortinet:fortios:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.4.0",
+                                        "versionEndExcluding": "7.4.3",
+                                        "matchCriteriaId": "H8I9J0K1-L2M3-4567-NOPQ-678901234567"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://fortiguard.com/psirt/FG-IR-24-015",
+                        "source": "psirt@fortinet.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-8381",
+                "sourceIdentifier": "security@mozilla.org",
+                "published": "2024-09-03T13:15:04.780",
+                "lastModified": "2024-09-05T17:45:22.113",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "A potentially exploitable type confusion could be triggered when looking up a property name on an object being used as the `with` environment in Mozilla Firefox."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Una confusión de tipos potencialmente explotable podría activarse al buscar un nombre de propiedad en un objeto que se usa como el entorno `with` en Mozilla Firefox."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "MEDIUM",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 9.3
+                            },
+                            "baseSeverity": "HIGH",
+                            "exploitabilityScore": 8.6,
+                            "impactScore": 10,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": true
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-843"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:mozilla:firefox:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "130.0",
+                                        "matchCriteriaId": "I9J0K1L2-M3N4-5678-OPQR-789012345678"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://www.mozilla.org/security/advisories/mfsa2024-39/",
+                        "source": "security@mozilla.org",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-8382",
+                "sourceIdentifier": "security@mozilla.org",
+                "published": "2024-09-03T13:15:04.560",
+                "lastModified": "2024-09-05T17:30:15.890",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Internal browser event interfaces were exposed to web content when privileged EventHandler listener callbacks ran for those events in Mozilla Firefox."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Las interfaces de eventos internos del navegador estaban expuestas al contenido web cuando se ejecutaban devoluciones de llamada de escucha EventHandler privilegiadas para esos eventos en Mozilla Firefox."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "MEDIUM",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "PARTIAL",
+                                "integrityImpact": "PARTIAL",
+                                "availabilityImpact": "NONE",
+                                "baseScore": 5.8
+                            },
+                            "baseSeverity": "MEDIUM",
+                            "exploitabilityScore": 8.6,
+                            "impactScore": 4.9,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": true
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-497"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:mozilla:firefox:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "130.0",
+                                        "matchCriteriaId": "J0K1L2M3-N4O5-6789-PQRS-890123456789"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://www.mozilla.org/security/advisories/mfsa2024-39/",
+                        "source": "security@mozilla.org",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-7965",
+                "sourceIdentifier": "chrome-cve-admin@google.com",
+                "published": "2024-08-21T21:15:08.670",
+                "lastModified": "2024-08-26T14:15:33.220",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Inappropriate implementation in V8 in Google Chrome prior to 128.0.6613.84 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Una implementación inapropiada en V8 en Google Chrome anterior a 128.0.6613.84 permitió a un atacante remoto explotar potencialmente la corrupción del heap a través de una página HTML manipulada."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "MEDIUM",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 9.3
+                            },
+                            "baseSeverity": "HIGH",
+                            "exploitabilityScore": 8.6,
+                            "impactScore": 10,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": true
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-787"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "128.0.6613.84",
+                                        "matchCriteriaId": "K1L2M3N4-O5P6-7890-QRST-901234567890"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://chromereleases.googleblog.com/2024/08/stable-channel-update-for-desktop_21.html",
+                        "source": "chrome-cve-admin@google.com",
+                        "tags": [
+                            "Release Notes"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-30088",
+                "sourceIdentifier": "secure@microsoft.com",
+                "published": "2024-06-11T17:15:52.340",
+                "lastModified": "2024-06-20T14:22:18.890",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Windows Kernel Elevation of Privilege Vulnerability. An attacker who successfully exploited this vulnerability could gain SYSTEM privileges."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Vulnerabilidad de elevación de privilegios del kernel de Windows. Un atacante que explotara con éxito esta vulnerabilidad podría obtener privilegios de SYSTEM."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:L/AC:M/Au:N/C:C/I:C/A:C",
+                                "accessVector": "LOCAL",
+                                "accessComplexity": "MEDIUM",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 6.9
+                            },
+                            "baseSeverity": "MEDIUM",
+                            "exploitabilityScore": 3.4,
+                            "impactScore": 10,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": true,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-269"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:microsoft:windows_10_21h2:*:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "L2M3N4O5-P6Q7-8901-RSTU-012345678901"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-30088",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "Patch",
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-21413",
+                "sourceIdentifier": "secure@microsoft.com",
+                "published": "2024-02-13T18:15:47.123",
+                "lastModified": "2024-02-20T16:30:22.557",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Microsoft Outlook Remote Code Execution Vulnerability. This vulnerability allows remote code execution when a user opens a specially crafted email."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Vulnerabilidad de ejecución remota de código en Microsoft Outlook. Esta vulnerabilidad permite la ejecución remota de código cuando un usuario abre un correo electrónico especialmente diseñado."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 10
+                            },
+                            "baseSeverity": "CRITICAL",
+                            "exploitabilityScore": 10,
+                            "impactScore": 10,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-94"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:microsoft:outlook:*:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "M3N4O5P6-Q7R8-9012-STUV-123456789012"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-21413",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "Patch",
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-3400",
+                "sourceIdentifier": "psirt@paloaltonetworks.com",
+                "published": "2024-04-12T08:15:06.230",
+                "lastModified": "2024-04-19T14:22:33.447",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "A command injection vulnerability in the GlobalProtect feature of Palo Alto Networks PAN-OS software enables an unauthenticated attacker to execute arbitrary code with root privileges on the firewall."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Una vulnerabilidad de inyección de comandos en la función GlobalProtect del software PAN-OS de Palo Alto Networks permite a un atacante no autenticado ejecutar código arbitrario con privilegios de root en el firewall."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 10
+                            },
+                            "baseSeverity": "CRITICAL",
+                            "exploitabilityScore": 10,
+                            "impactScore": 10,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": true,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-77"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:paloaltonetworks:pan-os:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "11.1.0",
+                                        "versionEndExcluding": "11.1.3",
+                                        "matchCriteriaId": "N4O5P6Q7-R8S9-0123-TUVW-234567890123"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://security.paloaltonetworks.com/CVE-2024-3400",
+                        "source": "psirt@paloaltonetworks.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-23897",
+                "sourceIdentifier": "security@jenkins.io",
+                "published": "2024-01-24T18:15:09.350",
+                "lastModified": "2024-02-05T14:22:18.113",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Jenkins 2.441 and earlier, LTS 2.426.2 and earlier does not disable a feature of its CLI command parser that replaces an '@' character followed by a file path in an argument with the file's contents."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Jenkins 2.441 y anteriores, LTS 2.426.2 y anteriores no deshabilita una función de su analizador de comandos CLI que reemplaza un carácter '@' seguido de una ruta de archivo en un argumento con el contenido del archivo."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 10
+                            },
+                            "baseSeverity": "CRITICAL",
+                            "exploitabilityScore": 10,
+                            "impactScore": 10,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": true,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-22"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:jenkins:jenkins:*:*:*:*:*:*:*:*",
+                                        "versionEndIncluding": "2.441",
+                                        "matchCriteriaId": "O5P6Q7R8-S9T0-1234-UVWX-345678901234"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://www.jenkins.io/security/advisory/2024-01-24/",
+                        "source": "security@jenkins.io",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-27198",
+                "sourceIdentifier": "security@jetbrains.com",
+                "published": "2024-03-04T16:15:08.120",
+                "lastModified": "2024-03-11T18:22:33.557",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "In JetBrains TeamCity before 2023.11.4 authentication bypass allowing to perform admin actions was possible."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "En JetBrains TeamCity anterior a 2023.11.4 era posible eludir la autenticación permitiendo realizar acciones de administrador."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 10
+                            },
+                            "baseSeverity": "CRITICAL",
+                            "exploitabilityScore": 10,
+                            "impactScore": 10,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": true,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-288"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:jetbrains:teamcity:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "2023.11.4",
+                                        "matchCriteriaId": "P6Q7R8S9-T0U1-2345-VWXY-456789012345"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://www.jetbrains.com/security/advisory/jetbrains-security-bulletin-q1-2024/",
+                        "source": "security@jetbrains.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-1709",
+                "sourceIdentifier": "security@connectwise.com",
+                "published": "2024-02-21T16:15:50.890",
+                "lastModified": "2024-02-28T14:22:18.447",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "ConnectWise ScreenConnect 23.9.7 and prior are affected by an Authentication Bypass Using an Alternate Path or Channel vulnerability, which may allow an attacker direct access to confidential information or critical systems."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "ConnectWise ScreenConnect 23.9.7 y anteriores están afectados por una vulnerabilidad de elusión de autenticación usando una ruta o canal alternativo."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 10
+                            },
+                            "baseSeverity": "CRITICAL",
+                            "exploitabilityScore": 10,
+                            "impactScore": 10,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": true,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-288"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:connectwise:screenconnect:*:*:*:*:*:*:*:*",
+                                        "versionEndIncluding": "23.9.7",
+                                        "matchCriteriaId": "Q7R8S9T0-U1V2-3456-WXYZ-567890123456"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://www.connectwise.com/company/trust/security-bulletins/connectwise-screenconnect-23.9.8",
+                        "source": "security@connectwise.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-29824",
+                "sourceIdentifier": "security@ivanti.com",
+                "published": "2024-05-31T18:15:09.670",
+                "lastModified": "2024-06-10T14:22:33.890",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "An unspecified SQL Injection vulnerability in Core server of Ivanti EPM 2022 SU5 and prior allows an unauthenticated attacker within the same network to execute arbitrary code."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Una vulnerabilidad de inyección SQL no especificada en el servidor Core de Ivanti EPM 2022 SU5 y anteriores permite a un atacante no autenticado dentro de la misma red ejecutar código arbitrario."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:A/AC:L/Au:N/C:C/I:C/A:C",
+                                "accessVector": "ADJACENT_NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 8.3
+                            },
+                            "baseSeverity": "HIGH",
+                            "exploitabilityScore": 6.5,
+                            "impactScore": 10,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": true,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-89"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:ivanti:endpoint_manager:*:*:*:*:*:*:*:*",
+                                        "versionEndIncluding": "2022_su5",
+                                        "matchCriteriaId": "R8S9T0U1-V2W3-4567-XYZA-678901234567"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://forums.ivanti.com/s/article/Security-Advisory-EPM-May-2024",
+                        "source": "security@ivanti.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-20353",
+                "sourceIdentifier": "psirt@cisco.com",
+                "published": "2024-04-24T19:15:47.340",
+                "lastModified": "2024-05-01T14:22:18.557",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "A vulnerability in the management and VPN web servers for Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Una vulnerabilidad en los servidores web de administración y VPN para el software Cisco Adaptive Security Appliance (ASA) y el software Cisco Firepower Threat Defense (FTD) podría permitir que un atacante remoto no autenticado provoque que el dispositivo se recargue inesperadamente."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "NONE",
+                                "integrityImpact": "NONE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 7.8
+                            },
+                            "baseSeverity": "HIGH",
+                            "exploitabilityScore": 10,
+                            "impactScore": 6.9,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-835"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:cisco:adaptive_security_appliance_software:*:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "S9T0U1V2-W3X4-5678-YZAB-789012345678"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-websrvs-dos-X8gNucD2",
+                        "source": "psirt@cisco.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-21683",
+                "sourceIdentifier": "security@atlassian.com",
+                "published": "2024-05-21T18:15:09.120",
+                "lastModified": "2024-05-29T14:22:33.447",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "This High severity RCE (Remote Code Execution) vulnerability was introduced in version 5.2 of Confluence Data Center and Server. This allows an authenticated attacker to execute arbitrary code."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Esta vulnerabilidad RCE (Ejecución Remota de Código) de alta gravedad se introdujo en la versión 5.2 de Confluence Data Center y Server. Esto permite a un atacante autenticado ejecutar código arbitrario."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "SINGLE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 9
+                            },
+                            "baseSeverity": "HIGH",
+                            "exploitabilityScore": 8,
+                            "impactScore": 10,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": true,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-94"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:atlassian:confluence_server:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "5.2",
+                                        "matchCriteriaId": "T0U1V2W3-X4Y5-6789-ZABC-890123456789"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://jira.atlassian.com/browse/CONFSERVER-95832",
+                        "source": "security@atlassian.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-0012",
+                "sourceIdentifier": "psirt@paloaltonetworks.com",
+                "published": "2024-11-18T16:15:23.450",
+                "lastModified": "2024-11-22T14:22:18.890",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "An authentication bypass in Palo Alto Networks PAN-OS software enables an unauthenticated attacker with network access to the management web interface to gain PAN-OS administrator privileges."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Una elusión de autenticación en el software PAN-OS de Palo Alto Networks permite a un atacante no autenticado con acceso de red a la interfaz web de administración obtener privilegios de administrador de PAN-OS."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 10
+                            },
+                            "baseSeverity": "CRITICAL",
+                            "exploitabilityScore": 10,
+                            "impactScore": 10,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": true,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-306"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:paloaltonetworks:pan-os:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "10.2.0",
+                                        "versionEndExcluding": "10.2.12-h2",
+                                        "matchCriteriaId": "U1V2W3X4-Y5Z6-7890-ABCD-901234567890"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://security.paloaltonetworks.com/CVE-2024-0012",
+                        "source": "psirt@paloaltonetworks.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-47575",
+                "sourceIdentifier": "psirt@fortinet.com",
+                "published": "2024-10-23T15:15:30.120",
+                "lastModified": "2024-10-30T14:22:33.557",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "A missing authentication for critical function vulnerability in FortiManager fgfmd daemon may allow a remote unauthenticated attacker to execute arbitrary code or commands via specially crafted requests."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Una vulnerabilidad de autenticación faltante para función crítica en el daemon fgfmd de FortiManager puede permitir que un atacante remoto no autenticado ejecute código o comandos arbitrarios a través de solicitudes especialmente diseñadas."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 10
+                            },
+                            "baseSeverity": "CRITICAL",
+                            "exploitabilityScore": 10,
+                            "impactScore": 10,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": true,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-306"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:fortinet:fortimanager:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "7.0.0",
+                                        "versionEndExcluding": "7.0.13",
+                                        "matchCriteriaId": "V2W3X4Y5-Z6A7-8901-BCDE-012345678901"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://fortiguard.com/psirt/FG-IR-24-423",
+                        "source": "psirt@fortinet.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-38856",
+                "sourceIdentifier": "security@apache.org",
+                "published": "2024-08-05T09:15:33.450",
+                "lastModified": "2024-08-12T14:22:18.113",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Incorrect Authorization vulnerability in Apache OFBiz. This issue affects Apache OFBiz: before 18.12.15. Users are recommended to upgrade to version 18.12.15, which fixes the issue."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Vulnerabilidad de autorización incorrecta en Apache OFBiz. Este problema afecta a Apache OFBiz: antes de 18.12.15. Se recomienda a los usuarios actualizar a la versión 18.12.15, que soluciona el problema."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 10
+                            },
+                            "baseSeverity": "CRITICAL",
+                            "exploitabilityScore": 10,
+                            "impactScore": 10,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": true,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-863"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:apache:ofbiz:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "18.12.15",
+                                        "matchCriteriaId": "W3X4Y5Z6-A7B8-9012-CDEF-123456789012"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://ofbiz.apache.org/download.html",
+                        "source": "security@apache.org",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-50623",
+                "sourceIdentifier": "cve@cleo.com",
+                "published": "2024-10-27T14:15:08.670",
+                "lastModified": "2024-11-05T18:22:33.890",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "In Cleo Harmony, VLTrader, and LexiCom before 5.8.0.21, there is an unrestricted file upload and download vulnerability that could lead to remote code execution."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "En Cleo Harmony, VLTrader y LexiCom antes de 5.8.0.21, existe una vulnerabilidad de carga y descarga de archivos sin restricciones que podría conducir a la ejecución remota de código."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:N/C:C/I:C/A:C",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 10
+                            },
+                            "baseSeverity": "CRITICAL",
+                            "exploitabilityScore": 10,
+                            "impactScore": 10,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": true,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-434"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:cleo:harmony:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "5.8.0.21",
+                                        "matchCriteriaId": "X4Y5Z6A7-B8C9-0123-DEFG-234567890123"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://support.cleo.com/hc/en-us/articles/28408134019735",
+                        "source": "cve@cleo.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-9474",
+                "sourceIdentifier": "psirt@paloaltonetworks.com",
+                "published": "2024-11-18T16:15:24.780",
+                "lastModified": "2024-11-25T14:22:18.447",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "A privilege escalation vulnerability in Palo Alto Networks PAN-OS software allows a PAN-OS administrator with access to the management web interface to perform actions on the firewall with root privileges."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Una vulnerabilidad de escalada de privilegios en el software PAN-OS de Palo Alto Networks permite a un administrador de PAN-OS con acceso a la interfaz web de administración realizar acciones en el firewall con privilegios de root."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:L/Au:S/C:C/I:C/A:C",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "LOW",
+                                "authentication": "SINGLE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 9
+                            },
+                            "baseSeverity": "HIGH",
+                            "exploitabilityScore": 8,
+                            "impactScore": 10,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": true,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-78"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:paloaltonetworks:pan-os:*:*:*:*:*:*:*:*",
+                                        "versionStartIncluding": "10.1.0",
+                                        "versionEndExcluding": "10.1.14-h6",
+                                        "matchCriteriaId": "Y5Z6A7B8-C9D0-1234-EFGH-345678901234"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://security.paloaltonetworks.com/CVE-2024-9474",
+                        "source": "psirt@paloaltonetworks.com",
+                        "tags": [
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-11477",
+                "sourceIdentifier": "zdi-disclosures@trendmicro.com",
+                "published": "2024-11-22T20:15:09.340",
+                "lastModified": "2024-11-29T14:22:33.113",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "7-Zip Zstandard Decompression Integer Underflow Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of 7-Zip."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Vulnerabilidad de ejecución remota de código por subdesbordamiento de enteros en la descompresión Zstandard de 7-Zip. Esta vulnerabilidad permite a atacantes remotos ejecutar código arbitrario en instalaciones afectadas de 7-Zip."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:M/Au:N/C:C/I:C/A:C",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "MEDIUM",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 9.3
+                            },
+                            "baseSeverity": "HIGH",
+                            "exploitabilityScore": 8.6,
+                            "impactScore": 10,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": true
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-191"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:a:7-zip:7-zip:*:*:*:*:*:*:*:*",
+                                        "versionEndExcluding": "24.07",
+                                        "matchCriteriaId": "Z6A7B8C9-D0E1-2345-FGHI-456789012345"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://www.zerodayinitiative.com/advisories/ZDI-24-1532/",
+                        "source": "zdi-disclosures@trendmicro.com",
+                        "tags": [
+                            "Third Party Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-43451",
+                "sourceIdentifier": "secure@microsoft.com",
+                "published": "2024-11-12T18:15:22.340",
+                "lastModified": "2024-11-19T14:22:18.557",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "NTLM Hash Disclosure Spoofing Vulnerability in Windows. An attacker could exploit this vulnerability to obtain a user's NTLMv2 hash, which could then be used to authenticate as that user."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Vulnerabilidad de suplantación de divulgación de hash NTLM en Windows. Un atacante podría explotar esta vulnerabilidad para obtener el hash NTLMv2 de un usuario, que luego podría usarse para autenticarse como ese usuario."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:N",
+                                "accessVector": "NETWORK",
+                                "accessComplexity": "MEDIUM",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "PARTIAL",
+                                "integrityImpact": "PARTIAL",
+                                "availabilityImpact": "NONE",
+                                "baseScore": 5.8
+                            },
+                            "baseSeverity": "MEDIUM",
+                            "exploitabilityScore": 8.6,
+                            "impactScore": 4.9,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": false,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": true
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-200"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:microsoft:windows_10:*:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "A7B8C9D0-E1F2-3456-GHIJ-567890123456"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-43451",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "Patch",
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "cve": {
+                "id": "CVE-2024-49138",
+                "sourceIdentifier": "secure@microsoft.com",
+                "published": "2024-12-10T18:15:47.890",
+                "lastModified": "2024-12-17T14:22:33.220",
+                "vulnStatus": "Analyzed",
+                "cveTags": [],
+                "descriptions": [
+                    {
+                        "lang": "en",
+                        "value": "Windows Common Log File System Driver Elevation of Privilege Vulnerability. An attacker who successfully exploited this vulnerability could gain SYSTEM privileges."
+                    },
+                    {
+                        "lang": "es",
+                        "value": "Vulnerabilidad de elevación de privilegios del controlador del sistema de archivos de registro común de Windows. Un atacante que explotara con éxito esta vulnerabilidad podría obtener privilegios de SYSTEM."
+                    }
+                ],
+                "metrics": {
+                    "cvssMetricV2": [
+                        {
+                            "source": "nvd@nist.gov",
+                            "type": "Primary",
+                            "cvssData": {
+                                "version": "2.0",
+                                "vectorString": "AV:L/AC:L/Au:N/C:C/I:C/A:C",
+                                "accessVector": "LOCAL",
+                                "accessComplexity": "LOW",
+                                "authentication": "NONE",
+                                "confidentialityImpact": "COMPLETE",
+                                "integrityImpact": "COMPLETE",
+                                "availabilityImpact": "COMPLETE",
+                                "baseScore": 7.2
+                            },
+                            "baseSeverity": "HIGH",
+                            "exploitabilityScore": 3.9,
+                            "impactScore": 10,
+                            "acInsufInfo": false,
+                            "obtainAllPrivilege": true,
+                            "obtainUserPrivilege": false,
+                            "obtainOtherPrivilege": false,
+                            "userInteractionRequired": false
+                        }
+                    ]
+                },
+                "weaknesses": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "description": [
+                            {
+                                "lang": "en",
+                                "value": "CWE-122"
+                            }
+                        ]
+                    }
+                ],
+                "configurations": [
+                    {
+                        "nodes": [
+                            {
+                                "operator": "OR",
+                                "negate": false,
+                                "cpeMatch": [
+                                    {
+                                        "vulnerable": true,
+                                        "criteria": "cpe:2.3:o:microsoft:windows_server_2022:*:*:*:*:*:*:*:*",
+                                        "matchCriteriaId": "B8C9D0E1-F2A3-4567-HIJK-678901234567"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "references": [
+                    {
+                        "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-49138",
+                        "source": "secure@microsoft.com",
+                        "tags": [
+                            "Patch",
+                            "Vendor Advisory"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
