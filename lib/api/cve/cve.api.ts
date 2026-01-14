@@ -1,21 +1,28 @@
+
 import type { Cve, CveEntryDto } from "./cve.types";
+import { dtoToCve } from "./cve.mapper";
 
-export function dtoToCve(entry: CveEntryDto): Cve {
-    const cve = entry.cve;
+const CVE_BASE_URL =
+  "https://45dd4b13-a54d-424a-ba8f-146262bdb45d.mock.pstmn.io/vulns";
 
-    const cveDescription =
-        cve.descriptions?.find((d) => d.lang === "en")?.value ??
-        cve.descriptions?.[0]?.value ??
-        "";
+export async function fetchCves(): Promise<Cve[]> {
+  const res = await fetch(CVE_BASE_URL, {
+    headers: {
+      Accept: "application/json",
+    },
+  });
 
-    const v2 = cve.metrics?.cvssMetricV2?.[0];
-    const cveSeverity = v2?.baseSeverity ?? "UNKNOWN";
-    const cveScores = v2?.cvssData?.baseScore ?? 0;
+  if (!res.ok) {
+    const text = await res.text().catch(() => "");
+    throw new Error(`Fetch failed (${res.status}): ${text}`);
+  }
 
-    return {
-        cveId: cve.id,
-        cveDescription,
-        cveSeverity,
-        cveScores,
-    };
+  const data = (await res.json()) as { vulnerabilities?: CveEntryDto[] };
+
+  if (!data || !Array.isArray(data.vulnerabilities)) {
+    throw new Error("Unexpected response shape: missing vulnerabilities[]");
+  }
+
+  return data.vulnerabilities.map(dtoToCve);
 }
+
