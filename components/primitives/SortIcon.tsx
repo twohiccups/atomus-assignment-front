@@ -7,7 +7,7 @@ type SortIconProps = HTMLAttributes<SVGElement> & {
 };
 
 export function SortIcon({ direction, className, ...props }: SortIconProps) {
-  const classes = ["h-3 w-3", className].filter(Boolean).join(" ");
+  const classes = ["h-3 w-3 shrink-0", className].filter(Boolean).join(" ");
 
   if (direction === "asc") {
     return (

@@ -101,7 +101,7 @@ export default function Dashboard() {
                             Total CVEs
                         </p>
                         <p className="mt-3 text-3xl font-semibold text-slate-950">{vulnerabilities.length}</p>
-                        <p className="mt-2 text-sm text-slate-700">Sorted by highest severity score.</p>
+                        <p className="mt-2 text-sm text-slate-700">Unique CVEs and scores.</p>
                     </Card>
                     <Card className="p-5">
                         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-600">
