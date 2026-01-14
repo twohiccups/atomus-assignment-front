@@ -17,12 +17,22 @@ import { fetchDevices } from "../lib/api/device/device.api";
 import { fetchCves } from "../lib/api/cve/cve.api";
 import { DeviceVulnerability } from '@/types/types';
 import { consolidateDevicesAndCves } from '../util/consolidateDeviceCves';
+import {
+    sortVulnerabilities,
+    type SortConfig,
+    type SortDirection,
+    type VulnerabilitySortKey,
+} from "../util/sortVulnerabilities";
 
 
 type DeviceVulnerabilitiesContextValue = {
     devices: Device[];
     cves: Cve[];
     vulnerabilities: DeviceVulnerability[];
+    sortedVulnerabilities: DeviceVulnerability[];
+    sortConfig: SortConfig;
+    setSort: (key: VulnerabilitySortKey) => void;
+    setSortDirection: (direction: SortDirection) => void;
     loading: boolean;
     error: string | null;
     refresh: () => Promise<void>;
@@ -34,6 +44,10 @@ const DeviceVulnerabilitiesContext =
 export function DeviceVulnerabilitiesProvider(props: { children: ReactNode }) {
     const [devices, setDevices] = useState<Device[]>([]);
     const [cves, setCves] = useState<Cve[]>([]);
+    const [sortConfig, setSortConfig] = useState<SortConfig>({
+        key: "score",
+        direction: "desc",
+    });
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
@@ -79,6 +93,7 @@ export function DeviceVulnerabilitiesProvider(props: { children: ReactNode }) {
     }, []);
 
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         void refresh();
     }, [refresh]);
 
@@ -87,16 +102,49 @@ export function DeviceVulnerabilitiesProvider(props: { children: ReactNode }) {
         [devices, cves]
     );
 
+    const sortedVulnerabilities = useMemo(
+        () => sortVulnerabilities(vulnerabilities, sortConfig),
+        [vulnerabilities, sortConfig]
+    );
+
+    const setSort = useCallback((key: VulnerabilitySortKey) => {
+        setSortConfig((prev) => {
+            if (prev.key === key) {
+                return { key, direction: prev.direction === "asc" ? "desc" : "asc" };
+            }
+            return { key, direction: "desc" };
+        });
+    }, []);
+
+    const setSortDirection = useCallback((direction: SortDirection) => {
+        setSortConfig((prev) => ({ ...prev, direction }));
+    }, []);
+
     const value = useMemo<DeviceVulnerabilitiesContextValue>(
         () => ({
             devices,
             cves,
             vulnerabilities,
+            sortedVulnerabilities,
+            sortConfig,
+            setSort,
+            setSortDirection,
             loading,
             error,
             refresh,
         }),
-        [devices, cves, vulnerabilities, loading, error, refresh]
+        [
+            devices,
+            cves,
+            vulnerabilities,
+            sortedVulnerabilities,
+            sortConfig,
+            setSort,
+            setSortDirection,
+            loading,
+            error,
+            refresh,
+        ]
     );
 
     return (

@@ -2,9 +2,11 @@
 
 import { Fragment, useMemo, useState } from "react";
 import { useDeviceVulnerabilities } from "../contexts/deviceVulnerabilities.context";
+import type { VulnerabilitySortKey } from "../util/sortVulnerabilities";
 import { Card } from "./primitives/Card";
 import { Button } from "./primitives/Button";
 import { Pill } from "./primitives/Pill";
+import { SortIcon } from "./primitives/SortIcon";
 
 type SeverityTone = {
     label: string;
@@ -41,8 +43,24 @@ function formatScore(score: number): string {
     return score.toFixed(1);
 }
 
+const sortLabels: Record<VulnerabilitySortKey, string> = {
+    cve: "CVE",
+    severity: "Severity",
+    score: "Score",
+    affected: "Affected Devices",
+};
+
 export default function Dashboard() {
-    const { vulnerabilities, devices, loading, error, refresh } = useDeviceVulnerabilities();
+    const {
+        vulnerabilities,
+        sortedVulnerabilities,
+        sortConfig,
+        setSort,
+        devices,
+        loading,
+        error,
+        refresh,
+    } = useDeviceVulnerabilities();
     const [expandedCveId, setExpandedCveId] = useState<string | null>(null);
 
     const totalDevices = useMemo(() => {
@@ -50,33 +68,26 @@ export default function Dashboard() {
         return uniqueDevices.size;
     }, [devices]);
 
-    const totalAffected = useMemo(() => vulnerabilities.reduce((sum, v) => sum + v.affectedMachines.length, 0), [
-        vulnerabilities,
-    ]);
-
     const toggleExpanded = (cveId: string) => {
         setExpandedCveId((prev) => (prev === cveId ? null : cveId));
     };
 
     return (
-        <div className="relative min-h-screen bg-[#f5f1ea] text-slate-900">
+        <div className="relative min-h-screen bg-[rgb(242,245,249)] text-slate-950">
             <div className="absolute inset-0 -z-10">
             </div>
 
             <main className="relative mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 py-12 font-sans">
                 <header className="flex flex-col gap-4">
-                    <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
+                    <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-700">
                         Vulnerability Overview
                     </p>
                     <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
                         <div className="max-w-xl space-y-3">
-                            <h1 className="text-3xl font-semibold leading-tight text-slate-900 md:text-4xl">
+                            <h1 className="text-3xl font-semibold leading-tight text-slate-950 md:text-4xl">
                                 CVE Dashboard
                             </h1>
-                            <p className="text-sm text-slate-600">
-                                Track exposure across devices, prioritize remediation, and drill into affected
-                                machines per CVE.
-                            </p>
+
                         </div>
                         <Button type="button" onClick={() => void refresh()} variant="ghost">
                             Refresh data
@@ -84,40 +95,33 @@ export default function Dashboard() {
                     </div>
                 </header>
 
-                <section className="grid gap-4 md:grid-cols-3">
+                <section className="grid gap-4 md:grid-cols-2">
                     <Card className="p-5">
-                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
+                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-600">
                             Total CVEs
                         </p>
-                        <p className="mt-3 text-3xl font-semibold text-slate-900">{vulnerabilities.length}</p>
-                        <p className="mt-2 text-sm text-slate-500">Sorted by highest severity score.</p>
+                        <p className="mt-3 text-3xl font-semibold text-slate-950">{vulnerabilities.length}</p>
+                        <p className="mt-2 text-sm text-slate-700">Sorted by highest severity score.</p>
                     </Card>
                     <Card className="p-5">
-                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
+                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-600">
                             Devices Scanned
                         </p>
-                        <p className="mt-3 text-3xl font-semibold text-slate-900">{totalDevices}</p>
-                        <p className="mt-2 text-sm text-slate-500">Unique machines in scope.</p>
-                    </Card>
-                    <Card className="p-5">
-                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
-                            Affected Devices
-                        </p>
-                        <p className="mt-3 text-3xl font-semibold text-slate-900">{totalAffected}</p>
-                        <p className="mt-2 text-sm text-slate-500">Aggregate impacted endpoints.</p>
+                        <p className="mt-3 text-3xl font-semibold text-slate-950">{totalDevices}</p>
+                        <p className="mt-2 text-sm text-slate-700">Unique machines in scope.</p>
                     </Card>
                 </section>
 
                 <Card className="overflow-hidden">
                     <div className="flex items-center justify-between border-b border-slate-200/80 px-6 py-4">
                         <div>
-                            <h2 className="text-lg font-semibold text-slate-900">CVE inventory</h2>
-                            <p className="text-sm text-slate-500">Click a row to reveal affected devices.</p>
+                            <h2 className="text-lg font-semibold text-slate-950">CVE inventory</h2>
+                            <p className="text-sm text-slate-700">Click a row to reveal affected devices.</p>
                         </div>
                         {loading ? (
-                            <Pill className="bg-slate-100 text-slate-500">Loading</Pill>
+                            <Pill className="bg-slate-200 text-slate-800">Loading</Pill>
                         ) : (
-                            <Pill className="bg-slate-100 text-slate-500">{vulnerabilities.length} entries</Pill>
+                            <Pill className="bg-slate-200 text-slate-800">{vulnerabilities.length} entries</Pill>
                         )}
                     </div>
 
@@ -129,29 +133,79 @@ export default function Dashboard() {
                     ) : null}
 
                     {loading && vulnerabilities.length === 0 ? (
-                        <div className="px-6 py-10 text-sm text-slate-500">Loading CVE data...</div>
+                        <div className="px-6 py-10 text-sm text-slate-700">Loading CVE data...</div>
                     ) : vulnerabilities.length === 0 ? (
-                        <div className="px-6 py-10 text-sm text-slate-500">No CVE data available.</div>
+                        <div className="px-6 py-10 text-sm text-slate-700">No CVE data available.</div>
                     ) : (
                         <div className="overflow-x-auto">
                             <table className="min-w-full border-separate border-spacing-0 text-left text-sm">
-                                <thead className="bg-slate-50 text-xs uppercase tracking-[0.2em] text-slate-400">
+                                <thead className="bg-slate-100 text-xs uppercase tracking-[0.2em] text-slate-600">
                                     <tr>
-                                        <th className="px-6 py-4 font-semibold">CVE</th>
-                                        <th className="px-6 py-4 font-semibold">Severity</th>
-                                        <th className="px-6 py-4 font-semibold">Score</th>
+                                        {(["cve", "severity", "score"] as VulnerabilitySortKey[]).map((key) => (
+                                            <th key={key} className="px-6 py-4 font-semibold">
+                                                <button
+                                                    type="button"
+                                                    onClick={() => setSort(key)}
+                                                    className={`flex w-full items-center justify-start gap-2 rounded-sm px-2 py-1 text-xs font-semibold uppercase tracking-[0.2em] transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 ${sortConfig.key === key
+                                                        ? "bg-white text-slate-800 shadow-sm"
+                                                        : "text-slate-600 hover:text-slate-800"
+                                                        }`}
+                                                    aria-sort={
+                                                        sortConfig.key === key
+                                                            ? sortConfig.direction === "asc"
+                                                                ? "ascending"
+                                                                : "descending"
+                                                            : "none"
+                                                    }
+                                                >
+                                                    <span>{sortLabels[key]}</span>
+                                                    <SortIcon
+                                                        direction={
+                                                            sortConfig.key === key
+                                                                ? sortConfig.direction
+                                                                : "none"
+                                                        }
+                                                    />
+                                                </button>
+                                            </th>
+                                        ))}
                                         <th className="px-6 py-4 font-semibold">Description</th>
-                                        <th className="px-6 py-4 text-right font-semibold">Affected Devices</th>
+                                        <th className="px-6 py-4 text-right font-semibold">
+                                            <button
+                                                type="button"
+                                                onClick={() => setSort("affected")}
+                                                className={`flex w-full items-center justify-end gap-2 rounded-sm px-2 py-1 text-xs font-semibold uppercase tracking-[0.2em] transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 ${sortConfig.key === "affected"
+                                                    ? "bg-white text-slate-800 shadow-sm"
+                                                    : "text-slate-600 hover:text-slate-800"
+                                                    }`}
+                                                aria-sort={
+                                                    sortConfig.key === "affected"
+                                                        ? sortConfig.direction === "asc"
+                                                            ? "ascending"
+                                                            : "descending"
+                                                        : "none"
+                                                }
+                                            >
+                                                <span>{sortLabels.affected}</span>
+                                                <SortIcon
+                                                    direction={
+                                                        sortConfig.key === "affected"
+                                                            ? sortConfig.direction
+                                                            : "none"
+                                                    }
+                                                />
+                                            </button>
+                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {vulnerabilities.map((entry) => {
+                                    {sortedVulnerabilities.map((entry) => {
                                         const isExpanded = expandedCveId === entry.cveId;
                                         const severityTone = getSeverityTone(entry.cveSeverity);
                                         return (
                                             <Fragment key={entry.cveId}>
                                                 <tr
-                                                    className={`cursor-pointer border-t border-slate-200/70 transition hover:bg-slate-50/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-300 ${isExpanded ? "bg-slate-50/70" : "bg-white/70"
+                                                    className={`cursor-pointer border-t border-slate-300/70 transition hover:bg-slate-100/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 ${isExpanded ? "bg-slate-100/70" : "bg-white"
                                                         }`}
                                                     role="button"
                                                     tabIndex={0}
@@ -164,33 +218,39 @@ export default function Dashboard() {
                                                         }
                                                     }}
                                                 >
-                                                    <td className="px-6 py-4 font-semibold text-slate-900">
-                                                        <span className="mr-2 inline-flex h-6 w-6 items-center justify-center rounded-full border border-slate-200 text-xs text-slate-500">
-                                                            {isExpanded ? "v" : ">"}
-                                                        </span>
-                                                        {entry.cveId}
+                                                    <td className="px-6 py-4 font-semibold text-slate-950">
+                                                        <div className="flex items-center gap-3">
+                                                            <button
+                                                                type="button"
+                                                                className="inline-flex h-7 w-7 items-center justify-center rounded-sm border border-slate-300 text-xs text-slate-700 transition hover:text-slate-900"
+                                                                aria-label={`Toggle ${entry.cveId}`}
+                                                            >
+                                                                {isExpanded ? "v" : ">"}
+                                                            </button>
+                                                            <span>{entry.cveId}</span>
+                                                        </div>
                                                     </td>
                                                     <td className="px-6 py-4">
                                                         <Pill className={severityTone.classes}>{severityTone.label}</Pill>
                                                     </td>
-                                                    <td className="px-6 py-4 text-slate-700">{formatScore(entry.cveScores)}</td>
-                                                    <td className="px-6 py-4 text-slate-600">{entry.cveDescription}</td>
-                                                    <td className="px-6 py-4 text-right font-semibold text-slate-900">
+                                                    <td className="px-6 py-4 text-slate-800">{formatScore(entry.cveScores)}</td>
+                                                    <td className="px-6 py-4 text-slate-700">{entry.cveDescription}</td>
+                                                    <td className="px-6 py-4 text-right font-semibold text-slate-950">
                                                         {entry.affectedMachines.length}
                                                     </td>
                                                 </tr>
                                                 {isExpanded ? (
                                                     <tr className="bg-white">
                                                         <td colSpan={5} className="px-6 pb-6 pt-0">
-                                                            <div className="rounded-xl border border-dashed border-slate-200 bg-slate-50/70 p-4">
-                                                                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
+                                                            <div className="rounded-md border border-dashed border-slate-300 bg-slate-100 p-4 mt-3">
+                                                                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-600">
                                                                     Affected devices
                                                                 </p>
                                                                 <div className="mt-3 flex flex-wrap gap-2">
                                                                     {entry.affectedMachines.map((machine) => (
                                                                         <Pill
                                                                             key={machine}
-                                                                            className="bg-white text-slate-600 border border-slate-200"
+                                                                            className="bg-white text-slate-800 border border-slate-300"
                                                                         >
                                                                             {machine}
                                                                         </Pill>
